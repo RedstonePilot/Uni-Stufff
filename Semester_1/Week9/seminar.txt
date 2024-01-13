@@ -1,0 +1,17 @@
+coins = [200, 100, 50, 20, 10, 5, 2, 1]
+
+
+function mincoins(ammount,avail_coins):
+    tmp = list with inf ammount+1 long
+    tmp[0] = 0
+    for c = 0 to size of coins - 1 do
+        for i = c to ammount +1
+            tmp[i] = min(tmp[i], tmp[i-c]+1)
+    reutnr tmp[ammount] 
+
+
+#############################################################
+
+
+sort based on price per kilo
+then pack the bag with the most expensive cheese unril full cutting the last

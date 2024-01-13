@@ -1,0 +1,30 @@
+a:
+01110
+00100
+01010
+00100
+00100
+
+b
+
+01110
+00101
+00000
+00100
+01100
+
+
+function find_influencer(following):
+    N = len(following)
+    candidate = 0
+
+    for i = 0 to N do
+        if following[candidate][i] == 1 or following[i][candidate] == 0 then
+            candidate = i
+
+    for i in range(N):
+        if i != candidate then
+            if following[i][candidate] != 1 or following[candidate][i] != 0 then
+                return -1
+
+    return candidate

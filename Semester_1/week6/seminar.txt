@@ -1,0 +1,29 @@
+max_current = max_global = A[0]
+for i = 1 to size -1 do
+    max_current = max of A[i],max_current+A[i]
+    if max_current > max_global
+        max_global = max_current
+
+return max_global
+
+    
+########################################
+
+
+global_max_sum = a big number (inf)
+rows = size in the x direction
+cols = size in the y direction
+
+for j = 0 to cols do
+    tmp = an array length rows of all 0
+    for k = j to cols do
+        for p = 0 to rows do
+            tmp = tmp + A[i][k]
+
+        max_sum = a very large number :)
+        current_sum = 0
+        for i = 0 to size-1 do
+            current_sum = max(num,current_sum + tmp[i])
+            max_sum = max(maxSum, current_sum)
+        global_max_sum = max(global_max_sum, maxSum)
+
