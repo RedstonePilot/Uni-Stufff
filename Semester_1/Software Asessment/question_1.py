@@ -15,4 +15,6 @@ def string_pattern(size):
     return "".join(output)
 
 
-print(string_pattern(3))
+if __name__ == "__main__":
+
+    print(string_pattern(3))
