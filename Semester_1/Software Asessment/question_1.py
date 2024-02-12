@@ -1,4 +1,16 @@
 def string_pattern(size):
+    """Returns a pattern based on the number entered
+
+    Args:
+        size (int): width of the pattern
+
+    Raises:
+        ValueError: If size is less than or equal to 2
+
+    Returns:
+        string: string of the pattern to be printed out. 
+        Each line has a "new line character" at the end
+    """
     if size <= 2:
         raise ValueError("Size must be larger than or equal to 3")
 

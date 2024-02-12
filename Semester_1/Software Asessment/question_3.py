@@ -1,10 +1,26 @@
-def trick_score(trick, trump_suit):
-    TRUMP_RANK = {"Jack": 20, "9": 14, "Ace": 11,
+TRUMP_RANK = {"Jack": 20, "9": 14, "Ace": 11,
+              "10": 10, "King": 4, "Queen": 3, "8": 0, "7": 0}
+NON_TRUMP_RANK = {"Jack": 2, "9": 0, "Ace": 11,
                   "10": 10, "King": 4, "Queen": 3, "8": 0, "7": 0}
-    NON_TRUMP_RANK = {"Jack": 2, "9": 0, "Ace": 11,
-                      "10": 10, "King": 4, "Queen": 3, "8": 0, "7": 0}
-    SUITS = ["Spades", "Diamonds", "Hearts", "Clubs"]
-    CARDS = ["7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+SUITS = ["Spades", "Diamonds", "Hearts", "Clubs"]
+CARDS = ["7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+
+
+def trick_score(trick, trump_suit):
+    """Scores a given trick based on the cards inside
+
+    Args:
+        trick (set (of tuples)): The 4 cards in the trick the the form (card,suit)
+        trump_suit (str): The trump suit
+
+    Raises:
+        TypeError: If the trump suit is not a valid suit
+        ValueError: If the trick is not composed of exaclty 4 cards 
+                    or the cards are invalid
+
+    Returns:
+        int: The given score of the trick
+    """
     if trump_suit not in SUITS:
         raise TypeError("Trump Suit must be a vaild suit")
     if len(trick) != 4:
