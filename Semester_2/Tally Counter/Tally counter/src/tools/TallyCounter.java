@@ -15,8 +15,7 @@ public class TallyCounter {
     }
 
     public String toString() {
-        int padl = Integer.toString(maxValue).length();
-        String formatter = "%0" + padl + "d";
+        String formatter = "%0" + Integer.toString(maxValue).length() + "d";
         return String.format(formatter, counter);
     }
 

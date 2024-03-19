@@ -5,15 +5,21 @@ public class InvalidOperationException extends Exception {
         super();
     }
 
-    public InvalidOperationException(String m) {
-        super(m);
+    public InvalidOperationException(String message) {
+        super(message);
     }
 
-    public InvalidOperationException(String m, Throwable c) {
-        super(m, c);
+    public InvalidOperationException(String message, Throwable cause) {
+        super(message, cause);
     }
 
-    public InvalidOperationException(Throwable c) {
-        super(c);
+    public InvalidOperationException(String message, Throwable cause, boolean enableSuppression,
+            boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
+
+    public InvalidOperationException(Throwable cause) {
+        super(cause);
+    }
+
 }

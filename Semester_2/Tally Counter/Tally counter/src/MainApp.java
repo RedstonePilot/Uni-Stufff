@@ -1,4 +1,6 @@
-package tools;
+
+import tools.InvalidOperationException;
+import tools.TallyCounter;
 
 public class MainApp {
 
